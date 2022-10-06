@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+body{
+  font-family: 'Noto Sans KR',sans-serif;
+  color: #fff;
+  line-height: 1.5em;
+  font-weight: 300;
+  font-size: 15px;
+  margin: 0;
+  background-color: #222;
+}
+
+a{
+  color: #000;
+  text-decoration: none;
+}
+
+.items{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.item{
+
+  width: 300px;
+  height: 200px;
+  display: inline-block;
+  position:relative;
+
+}
+
+.item:hover .front{
+  top:-50%;
+}
+
+.item:hover .back{
+  top: 50%;
+  opacity: 1;
+}
+
+.front,
+.back{
+  /* transition을 적용시키려면 필수적으로 필요하다 */
+  /* 시작지점과 끝 지점을 지정해줘야 하기 때문에 시작지점인 top이 필수적이다. */
+  top: 0;
+  position: absolute;
+  transition: 0.5s;
+}
+.item .front{
+  background-color: #333;
+  text-align: center;
+  height: inherit;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.item:nth-child(1):hover .front{
+  background-color: crimson;
+}
+
+.item:nth-child(2):hover .front{
+  background-color: plum;
+}
+
+.item:nth-child(3):hover .front{
+  background-color: palevioletred;
+}
+
+.item:hover .front img{
+  animation: ani 1s linear infinite;;
+}
+
+.item .front h2{
+  margin-top: 0;
+}
+
+.item .back{
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  height: inherit;
+  padding: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+}
+.item .back p{}
+
+.item .back a{
+  background-color: palevioletred;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+.item .back a:hover{
+  background-color: #222;
+}
+
+@keyframes ani{
+  0%,100%{transform: scale(1);}
+  50%{transform: scale(1.1);}
+}

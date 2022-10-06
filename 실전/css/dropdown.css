@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+body{
+  font-family: 'Noto Sans KR',sans-serif;
+  color: #222;
+  line-height: 1.5em;
+}
+
+a{
+  color:#000;
+  text-decoration: none;
+}
+
+.dropdown{
+  width: 200px;
+}
+
+.dropdown:hover .sub-dropdown{
+  display:block
+}
+
+.dropdown-btn{
+  border: none;
+  width: inherit;
+  padding: 12px;
+  background-color: pink;
+  font-size: 18px;
+}
+.sub-dropdown{
+  display: none;
+  /* border: 1px solid #222; */
+  box-shadow: 0 0 10px rgba(0,0,0,0.17);
+  width: inherit;
+}
+
+.sub-dropdown a{
+  display: block;
+  padding: 7px;
+  text-align: center;
+}
+
+.sub-dropdown a:hover{
+  background-color: #eee;
+}
+
